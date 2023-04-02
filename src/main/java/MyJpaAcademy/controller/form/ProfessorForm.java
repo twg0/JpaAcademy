@@ -1,4 +1,4 @@
-package MyJpaAcademy.domain.form;
+package MyJpaAcademy.controller.form;
 
 import lombok.Getter;
 

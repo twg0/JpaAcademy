@@ -33,14 +33,13 @@ public class Student {
     protected Student() {
     }
 
-    public Student(String name, String birth, String address, String phone, Integer grade, Integer schoolClass, List<Parent> parents, School school, String description) {
+    public Student(String name, String birth, String address, String phone, Integer grade, Integer schoolClass, School school, String description) {
         this.name = name;
         this.birth = birth;
         this.address = address;
         this.phone = phone;
         this.grade = grade;
         this.schoolClass = schoolClass;
-        this.parents = parents;
         this.school = school;
         this.description = description;
     }
