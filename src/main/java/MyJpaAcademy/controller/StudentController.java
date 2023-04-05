@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import javax.validation.Valid;
+import java.util.List;
 
 @Slf4j
 @Controller
@@ -40,5 +41,11 @@ public class StudentController {
         return "redirect:/";
     }
 
+    @GetMapping("/students")
+    public String findAll(Model model) {
+        List<Student> students = studentService.findStudents();
+        model.addAttribute("students", students);
+        return "students/studentList";
+    }
 
 }

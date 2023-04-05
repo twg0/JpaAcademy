@@ -16,6 +16,7 @@ public class StudentForm {
     @NotEmpty(message = "이름은 필수 입니다")
     private String name;
 
+    @NotEmpty(message = "생년월일은 필수 입니다")
     private String birth;
 
     private String address;

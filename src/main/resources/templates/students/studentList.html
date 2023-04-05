@@ -1,10 +1,40 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
+<head th:replace="fragments/header :: header" />
 <body>
-
+<div class="container">
+    <div th:replace="fragments/bodyHeader :: bodyHeader" />
+    <div>
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>#</th>
+                <th>이름</th>
+                <th>생일</th>
+                <th>주소</th>
+                <th>휴대폰번호</th>
+                <th>학교</th>
+                <th>학년</th>
+                <th>반</th>
+                <th>기타</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="student : ${students}">
+                <td th:text="${student.id}"></td>
+                <td th:text="${student.name}"></td>
+                <td th:text="${student.birth}"></td>
+                <td th:text="${student.address}"></td>
+                <td th:text="${student.phone}"></td>
+                <td th:text="${student.school}"></td>
+                <td th:text="${student.grade}"></td>
+                <td th:text="${student.schoolClass}"></td>
+                <td th:text="${student.description}"></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div th:replace="fragments/footer :: footer" />
+</div> <!-- /container -->
 </body>
 </html>
